@@ -1,0 +1,29 @@
+<h4>Reviews</h4>
+<blockquote ng-repeat="review in product.reviews">
+    <b class="clearfix">Stars: {{review.stars}}</b>
+    <span class="clearfix">{{review.body}}</span>
+    <cite class="clearfix">{{review.createdOn | date}}-{{review.author}}</cite>
+</blockquote>
+<form name="reviewForm" role="form"
+      ng-controller="ReviewController as reviewCtrl"
+      ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)"
+      novalidate>
+    <blockquote class="container">
+        <b class="clearfix">Stars: {{reviewCtrl.review.stars}}</b>
+        <span class="clearfix">{{reviewCtrl.review.body}}</span>
+        <cite class="clearfix">by: {{reviewCtrl.review.author}}</cite>
+    </blockquote>
+    <select class="form-control" ng-model="reviewCtrl.review.stars" required>
+        <option value="1">1 stars</option>
+        <option value="2">2 stars</option>
+        <option value="3">3 stars</option>
+        <option value="4">4 stars</option>
+        <option value="5">5 stars</option>
+    </select>
+    <textarea placeholder="your review" class="form-control"
+              ng-model="reviewCtrl.review.body" required></textarea>
+    by: <input placeholder="your email" type="email" class="form-control"
+               ng-model="reviewCtrl.review.author" required/>
+    <input type="submit" value="Submit" class="form-control"/>
+    <div><h1>review form is {{reviewForm.$valid}}</h1></div>
+</form>

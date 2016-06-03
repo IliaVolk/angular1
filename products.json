@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Dodecahedron",
+    "price": 2,
+    "description": "..description..",
+    "canPurchase": true,
+    "reviews":[
+      {
+        "stars": 4,
+        "body": "review 1",
+        "author": "author@1"
+      },
+      {
+        "stars":3,
+        "body": "review 2",
+        "author": "author@2"
+      }
+    ]
+  },
+  {
+    "name": "Pentagonal gem",
+    "price": 5.25,
+    "description": "..pentagonal gem..",
+    "canPurchase": true,
+    "reviews":[
+      {
+        "stars":3,
+        "body": "review 21",
+        "author": "author@21"
+      }
+    ]
+  }
+]
